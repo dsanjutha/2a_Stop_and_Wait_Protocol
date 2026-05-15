@@ -23,24 +23,24 @@ s.listen(5)
 c,addr=s.accept()
 
 while True:
+
+i=input("Enter a data: ")
   
-  i=input("Enter a data: ")
+c.send(i.encode())
   
-  c.send(i.encode())
+ack=c.recv(1024).decode()
   
-  ack=c.recv(1024).decode()
+if ack:
   
-  if ack:
+print(ack)
+   
+continue
   
-    print(ack)
+else:
     
-    continue
-  
-  else:
+c.close()
     
-    c.close()
-    
-    break
+break
     
 SERVER:
 
@@ -52,9 +52,9 @@ s.connect(('localhost',8000))
 
 while True:
   
-  print(s.recv(1024).decode())
+print(s.recv(1024).decode())
 
-  s.send("Acknowledgement Recived".encode())
+s.send("Acknowledgement Recived".encode())
 
 ## OUTPUT
 <img width="1920" height="1200" alt="Screenshot 2026-05-15 222106" src="https://github.com/user-attachments/assets/e2368ec0-1105-48d4-bca4-ea0d02d81280" />
