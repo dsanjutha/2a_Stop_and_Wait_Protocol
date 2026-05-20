@@ -57,7 +57,8 @@ print(s.recv(1024).decode())
 s.send("Acknowledgement Recived".encode())
 
 ## OUTPUT
-<img width="1920" height="1200" alt="Screenshot 2026-05-15 222106" src="https://github.com/user-attachments/assets/e2368ec0-1105-48d4-bca4-ea0d02d81280" />
+
+<img width="1920" height="1080" alt="Screenshot (51)" src="https://github.com/user-attachments/assets/350e243f-9105-4087-b7c7-3c4ed3ba560f" />
 
 
 ## RESULT
